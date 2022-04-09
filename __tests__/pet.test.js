@@ -1,5 +1,8 @@
 const Pet = require('../src/pet.js')
 
+const MAXIMUM_FITNESS = 10;
+const MINIMUM_HUNGER = 0;
+
 describe('constructor', () => {
     it('returns an object', () => {
       expect(new Pet('Fido')).toBeInstanceOf(Object);
@@ -40,6 +43,17 @@ describe ('walk', () => {
     pet.fitness = 8;
     pet.walk();
 
-    expect(pet.fitness).toEqual(10);
+    expect(pet.fitness).toEqual(MAXIMUM_FITNESS);
+  });
+});
+
+describe ('feed', () => {
+  it('decreases hunger level by 3 to a minimum of 0', () => {
+    const pet = new Pet('Fido');
+
+    pet.hunger = 2;
+    pet.feed();
+
+    expect(pet.hunger).toEqual(MINIMUM_HUNGER);
   });
 });
