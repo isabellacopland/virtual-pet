@@ -32,4 +32,11 @@ const MINIMUM_HUNGER = 0;
       }
   };
 
+  Pet.prototype.checkUp = function () {
+      if ((this.fitness <= 3) && (this.hunger >= 5)) {return 'I am hungry AND I need a walk'}
+      if ((this.fitness <= 3) && (this.hunger <= 5)) {return 'I need a walk'}
+      if ((this.hunger >= 5) && (this.fitness >= 3)) {return 'I am hungry'}
+      else {return 'I feel great!'}
+  };
+
  

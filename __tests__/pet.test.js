@@ -57,3 +57,15 @@ describe ('feed', () => {
     expect(pet.hunger).toEqual(MINIMUM_HUNGER);
   });
 });
+
+describe ('checkUp', () => {
+  it('tells you how your dog is feeling', () => {
+    const pet = new Pet('Fido');
+
+    pet.fitness = 3;
+    pet.hunger = 5;
+    pet.checkUp();
+
+    expect(pet.checkUp()).toBe('I am hungry AND I need a walk')
+  });
+});
