@@ -23,6 +23,19 @@ describe('constructor', () => {
     });
   });
 
+describe('isAlive', () => {
+  it('returns true is age is less than 30, hunger less than 10, and fitness greater than 0', () => {
+    const pet = new Pet('Fido');
+
+    pet.age = 31
+    pet.hunger = 8
+    pet.fitness = 3
+    pet.isAlive;
+
+    expect(pet.isAlive).toBe(false)
+  });
+});
+
 
 describe('growUp', () => {
   it('increments the age by 1, hunger by 5 and fitness by -3', () => {

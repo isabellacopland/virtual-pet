@@ -10,6 +10,12 @@ const MINIMUM_HUNGER = 0;
     this.fitness = 10;
   };
 
+  Pet.prototype = {
+      get isAlive() {
+          return this.age < 30 && this.hunger <10 && this.fitness > 0;
+      }
+  };
+
   Pet.prototype.growUp = function() {
     this.age += 1;
     this.hunger += 5;
@@ -38,5 +44,6 @@ const MINIMUM_HUNGER = 0;
       if ((this.hunger >= 5) && (this.fitness >= 3)) {return 'I am hungry'}
       else {return 'I feel great!'}
   };
+
 
  
