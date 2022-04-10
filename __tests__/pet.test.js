@@ -23,6 +23,15 @@ describe('constructor', () => {
     });
   });
 
+describe ('adoptChild', () => {
+  it('adopts baby', () => {
+    const parent = new Pet('Daisy');
+    const child = new Pet('Lily')
+
+    expect(child.name).toBe('Lily');
+  });
+});
+
 describe('isAlive', () => {
   it('returns true is age is less than 30, hunger less than 10, and fitness greater than 0', () => {
     const pet = new Pet('Fido');

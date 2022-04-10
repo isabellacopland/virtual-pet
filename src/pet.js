@@ -12,6 +12,10 @@ const MAXIMUM_HUNGER = 10;
     this.fitness = 10;
   };
 
+ Pet.prototype.adoptChild = function(baby, parent) {
+     return parent.children = [baby]
+ };
+
   Pet.prototype = {
       get isAlive() {
           return this.age < 30 && this.hunger < MAXIMUM_HUNGER && this.fitness > MINIMUM_FITNESS;
@@ -59,5 +63,9 @@ const MAXIMUM_HUNGER = 10;
       else {return 'I feel great!'}
   };
 
+  Pet.prototype.adoptChild = function () {
+     parent.child = (child);
+  };
+  
 
  
