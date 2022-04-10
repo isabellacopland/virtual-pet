@@ -12,8 +12,8 @@ const MAXIMUM_HUNGER = 10;
     this.fitness = 10;
   };
 
- Pet.prototype.adoptChild = function(baby, parent) {
-     return parent.children = [baby]
+ Pet.prototype.adoptChild = function(child, parent) {
+     return parent.children = [child]
  };
 
   Pet.prototype = {
